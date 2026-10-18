@@ -86,7 +86,7 @@ void dynstr_delete(Dynamic_String *dyn_str);
 		if (req_sz > str->length) return false;
 		
 		for (size_t i = 0; i < req_sz; ++i) {
-			if (req[req_sz-i] != str->data[str->length-i]) return false;
+			if (req[req_sz-i-1] != str->data[str->length-i-1]) return false;
 		}
 
 		return true;
